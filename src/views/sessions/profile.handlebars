@@ -1,0 +1,23 @@
+<h1>Profile</h1>
+
+<h2>Nombre: {{user.first_name}}</h2>
+<h4>Apellido: {{user.last_name}}</h4>
+<h4>Email: {{user.email}}</h4>
+<strong>Edad: {{user.age}}</strong>
+<strong>Rol: {{user.role}}</strong>
+
+<form action="/session/changeUserRole" method="get">
+  <button type="submit">Update Rol</button>
+</form>
+
+<form action="/api/users/documents" method="post" enctype="multipart/form-data">
+  <input type="file" name="file" multiple>
+  <button type="submit">Subir documento</button>
+</form>
+
+<form action="/api/users/imgProfile" method="post" enctype="multipart/form-data">
+  <input type="file" name="imgProf">
+  <button type="submit">Subir imagen de Usuario</button>
+</form>
+
+<a href="/products"><button></button></a>

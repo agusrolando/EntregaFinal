@@ -1,0 +1,14 @@
+<div>
+  <div class="card-body">
+    <h5 class="card-title">{{product.title}}</h5>
+    <strong>Stock</strong> {{product.stock}} <br>
+    <strong>Precio </strong>${{product.price}} <br>
+    <strong>Categoría</strong> {{product.category}} <br>
+    <strong>Description: </strong>
+    <p class="card-text">{{product.description}}</p>
+  </div>
+    <form action="/api/carts/{{user.cart._id}}/product/{{product._id}}" method="post">
+      <button id="addToCart" type="submit" >Agregar</button>
+    </form>
+    <a href="#" onClick="history.go(-1)">Volver</a>
+</div>
